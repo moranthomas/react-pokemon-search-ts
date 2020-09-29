@@ -68,13 +68,13 @@ export default class PokemonSearch extends Component<User, SearchState> {
             resultMarkup = (
             <div>
                 <img src={pokemon.imageUrl} alt="okekmon" className="pokemon-image"/>
-                <p>{userName} has {pokemon.numberOfAbilities} and experience {pokemon.baseExperience} </p>
+                <p>{pokemon.name} has {pokemon.numberOfAbilities} abilities and experience {pokemon.baseExperience} </p>
             </div>);
         }
 
         return (
             <div>
-                <p>User {userName} {'  '}
+                <p><b>User: </b> {userName} {'  '}
                 {numberOfPokemons && <span>has {numberOfPokemons} pokemons </span>} </p>
 
                 <input type="text" ref={this.pokemonRef}></input>
